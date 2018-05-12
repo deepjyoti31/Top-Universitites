@@ -116,7 +116,8 @@
                     //console.log(data.name);
                     //console.log(data);
                     localStorage.setItem("data", data.name);
-                   // localStorage.setItem("desc", data.briefDescription);
+                    localStorage.setItem("desc", data.briefDescription);
+                    localStorage.setItem("image", data.image);
                     window.location.replace('/Top10/top-10.html');
                 },
                 error: function(){

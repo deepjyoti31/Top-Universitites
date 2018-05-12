@@ -55,7 +55,7 @@
     <div class="container top-10">
         <div class="row">
             <div class="col-sm">
-                <img src="/uni-warsaw.jpg" class="img-fluid img-thumbnail float-left" alt="Responsive image" >
+                <img id="image" src="" class="img-fluid img-thumbnail float-left" alt="Responsive image" >
             </div>
             <div class="col-8">
                 <h3 id="uniname"></h3>
@@ -78,6 +78,7 @@
         $(document).ready(function(){
             $("#uniname").text(localStorage.getItem("data"));
             $("#uniDesc").text(localStorage.getItem("desc"));
+            $("#image").attr('src', localStorage.getItem("image"));
            // console.log("data: "+ localStorage.getItem("desc"));
         });
     </script>                           

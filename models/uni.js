@@ -14,7 +14,8 @@ const UniSchema = new Schema({
     avgFees: Number,
     status: String,
     researchOutput: String,
-    numStudents: Number 
+    numStudents: Number,
+    image: String
 });
 
 const Uni = mongoose.model('uni', UniSchema);
