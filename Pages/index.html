@@ -42,10 +42,10 @@
                       <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="./Pages/Top 10/top-10.html">Top 10</a>
+                      <a class="nav-link" href="/Top10/top-10.html">Top 10</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="./Pages/Uni-details/uni-details.html">Uni-Details</a>
+                      <a class="nav-link" href="Uni-details/uni-details.html">Uni-Details</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">---Log In---</a>
@@ -63,9 +63,9 @@
             <div class="col-sm">
                 <form>
                     <div class="input-group mb-3">
-                       <input type="text" class="form-control" placeholder="search" name="search">
+                       <input type="text" class="form-control" placeholder="search" name="search" id="uniname">
                        <div class="input-group-append">
-                           <button class="btn btn-default" type="submit">
+                           <button class="btn btn-default" id="btn_search" type="submit">
                             <i class="fas fa-search"></i>
                            </button>
                        </div>
@@ -82,20 +82,49 @@
                             <h3 class="home-featured-title">Featured Universities</h3>
                     </div>
                 <div class="col-sm">
-                    <img src="./images/uni-lodz.jpg" class="img-fluid img-thumbnail float-left" alt="Responsive image" >
+                    <img src="/uni-lodz.jpg" class="img-fluid img-thumbnail float-left" alt="Responsive image" >
                     <a href="#"><h5 class="home-featured-text">University Name</h5></a>
                 </div>
                 <div class="col-sm">
-                        <img src="./images/uni-lodz.jpg" class="img-fluid img-thumbnail float-left" alt="Responsive image" >
+                        <img src="/uni-lodz.jpg" class="img-fluid img-thumbnail float-left" alt="Responsive image" >
                         <a href="#"><p class="home-featured-text">University Name</p></a>
                 </div>
                 <div class="col-sm">
-                    <img src="./images/uni-lodz.jpg" class="img-fluid img-thumbnail float-left" alt="Responsive image" >
+                    <img src="/uni-lodz.jpg" class="img-fluid img-thumbnail float-left" alt="Responsive image" >
                     <a href="#"><h5 class="home-featured-text">University Name</h5></a>
                 </div>
             </div>
             
     </div>
-    
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+        $("#btn_search").click(function(e){
+            e.preventDefault();
+            console.log("clicking......");
+            var uniname = $("#uniname").val();
+            
+
+            $.ajax({
+                type: 'GET',
+                url: "http://localhost:4000/uni/"+uniname,
+                dataType: 'json',
+                success: function(data){
+                    //console.log(data.name);
+                    //console.log(data);
+                    localStorage.setItem("data", data.name);
+                   // localStorage.setItem("desc", data.briefDescription);
+                    window.location.replace('/Top10/top-10.html');
+                },
+                error: function(){
+                    //console.log('Search result not found');
+                }
+            });
+        });
+    });
+</script>   
 </body>
 </html>

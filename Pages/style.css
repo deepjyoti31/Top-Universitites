@@ -1,0 +1,78 @@
+
+
+ul {
+    list-style-type: none;
+}
+
+.body-home {
+  background: #007bff;  
+}
+
+
+.glyphicon-search {
+    font-size: 20px;
+}
+
+.btn-default {
+    background: orange;
+    width: 100px;
+    padding: 12.5px
+}
+
+.form-control {
+    padding: 25px;
+    font-size: 20px;
+}
+
+.navbar-dark {
+    background-color: #563d7c;
+}
+
+.top-10 {
+    margin-left: 20vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.home-featured {
+    margin-top: 5vh;
+    
+}
+
+.home-featured-text {
+    text-align: center;
+    color: black;
+    margin-top: 250px;
+}
+
+.home-featured-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    padding: 20px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    color: #ffffff;
+    font-weight: 100;
+}
+
+.home-title {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 50px;
+    padding: 80px 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.uni-details-brief {
+    margin-top: 5vh;
+}
+
+.uni-details-container {
+    padding: 1em;
+    margin: 2em;
+    text-align: center;
+}

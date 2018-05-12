@@ -55,48 +55,32 @@
     <div class="container top-10">
         <div class="row">
             <div class="col-sm">
-                <img src="../../images/uni-warsaw.jpg" class="img-fluid img-thumbnail float-left" alt="Responsive image" >
+                <img src="/uni-warsaw.jpg" class="img-fluid img-thumbnail float-left" alt="Responsive image" >
             </div>
             <div class="col-8">
-                <h3>University of Warsaw</h3>
-                <p>The University of Warsaw (Polish: Uniwersytet Warszawski, Latin: Universitas Varsoviensis), established in 1816, is the largest[6] university in Poland. It employs over 6,000 staff including over 3,100 academic educators. It provides graduate courses for 53,000 students (on top of over 9,200 postgraduate and doctoral candidates). The University offers some 37 different fields of study, 18 faculties and over 100 specializations in Humanities, technical as well as Natural Sciences.</p>
+                <h3 id="uniname"></h3>
+                <p id="uniDesc"></p>
                 <button type="button" class="btn btn-primary">Read More</button>
             </div>
         </div>
     </div>
     
-    <div class="container top-10">
-            <div class="row">
-                <div class="col-sm">
-                    <img src="../../images/uni-wroclaw.jpg" class="img-fluid img-thumbnail float-left" alt="Responsive image" >
-                </div>
-                <div class="container col-8">
-                    <h3>University of Wrocław</h3>
-                    <p>The University of Wrocław (UWr; Polish: Uniwersytet Wrocławski; German: Universität Breslau; Latin: Universitas Wratislaviensis) is a public research university located in Wrocław, Poland. The University of Wrocław was founded in 1945, replacing the previous German University of Breslau. Following the territorial changes of Poland's borders academics primarily from the John Casimir University of Lviv (Polish: Lwów) restored the university building heavily damaged and split as a result of the Battle of Breslau (1945). Nowadays it is one of the most prominent educational institutions in the region.</p>
-                    <button type="button" class="btn btn-primary">Read More</button>
-                </div>
-            </div>
-    </div>
-
-    <div class="container top-10">
-            <div class="row">
-                <div class="col-sm">
-                    <img src="../../images/uni-lodz.jpg" class="img-fluid img-thumbnail float-left" alt="Responsive image" >
-                </div>
-                <div class="col-8">
-                    <h3>University of Łódź</h3>
-                    <p>The University of Łódź (Polish: Uniwersytet Łódzki, Latin: Universitas Lodziensis) is a public research university founded in 1945 in Łódź, Poland, as a continuation of educational institutions functioning in Łódź in the interwar period — the Teacher Training Institute (1921–1928), the Higher School of Social and Economic Sciences (1924–1928) and a division of the Free Polish University (1928–1939).
-
-                            The University of Łódź (alternative spelling: University of Lodz) is a fully accredited, state-owned, traditional university. It is one of 18 institutions of its type in Poland.</p>
-                    <button type="button" class="btn btn-primary">Read More</button>
-                </div>
-            </div>
-        </div>
+    
 
        
       
 
-                          
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#uniname").text(localStorage.getItem("data"));
+            $("#uniDesc").text(localStorage.getItem("desc"));
+           // console.log("data: "+ localStorage.getItem("desc"));
+        });
+    </script>                           
                           
                           
 
