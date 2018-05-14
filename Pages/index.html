@@ -45,7 +45,7 @@
                       <a class="nav-link" href="/Top10/top-10.html">Top 10</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="Uni-details/uni-details.html">Uni-Details</a>
+                      <a class="nav-link" href="/Uni-details/uni-details.html">Uni-Details</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">---Log In---</a>
@@ -118,6 +118,11 @@
                     localStorage.setItem("data", data.name);
                     localStorage.setItem("desc", data.briefDescription);
                     localStorage.setItem("image", data.image);
+                    localStorage.setItem("fees", data.avgFees);
+                    localStorage.setItem("rank", data.rank);
+                    localStorage.setItem("status", data.status);
+                    localStorage.setItem("researchOutput", data.researchOutput);
+                    localStorage.setItem("numStudents", data.numStudents);
                     window.location.replace('/Top10/top-10.html');
                 },
                 error: function(){

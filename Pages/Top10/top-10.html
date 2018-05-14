@@ -37,13 +37,13 @@
                 <div class="collapse navbar-collapse" id="navbarColor02">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item ">
-                      <a class="nav-link" href="../../index.html">Home </a>
+                      <a class="nav-link" href="/index.html">Home </a>
                     </li>
                     <li class="nav-item active">
-                      <a class="nav-link" href="./top-10.html">Top 10 <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="/Top10/top-10.html">Top 10 <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="../Uni-details/uni-details.html">Uni-Details</a>
+                      <a class="nav-link" href="/Uni-details/uni-details.html">Uni-Details</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">---Log In---</a>
@@ -60,7 +60,8 @@
             <div class="col-8">
                 <h3 id="uniname"></h3>
                 <p id="uniDesc"></p>
-                <button type="button" class="btn btn-primary">Read More</button>
+                <a href="/Uni-details/uni-details.html"><button id="more" type="button" class="btn btn-primary">Find More</button></a>
+                
             </div>
         </div>
     </div>
@@ -79,6 +80,7 @@
             $("#uniname").text(localStorage.getItem("data"));
             $("#uniDesc").text(localStorage.getItem("desc"));
             $("#image").attr('src', localStorage.getItem("image"));
+
            // console.log("data: "+ localStorage.getItem("desc"));
         });
     </script>                           

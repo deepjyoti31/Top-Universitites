@@ -35,7 +35,7 @@
 </head>
 <body>
         <nav class="navbar navbar-expand-lg navbar-dark ">
-                <a class="navbar-brand" href="../../index.html">DN Universities</a>
+                <a class="navbar-brand" href="/index.html">DN Universities</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -43,13 +43,13 @@
                 <div class="collapse navbar-collapse" id="navbarColor02">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item ">
-                      <a class="nav-link" href="../../index.html">Home </a>
+                      <a class="nav-link" href="/index.html">Home </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="../Top 10/top-10.html">Top 10 </span></a>
+                      <a class="nav-link" href="/Top10/top-10.html">Top 10 </span></a>
                     </li>
                     <li class="nav-item active">
-                      <a class="nav-link" href="./uni-details.html">Uni-details <span class="sr-only">(current)</a>
+                      <a class="nav-link" href="/Uni-details/uni-details.html">Uni-details <span class="sr-only">(current)</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">---Log In---</a>
@@ -61,30 +61,30 @@
               <div class="container top-10">
                 <div class="row">
                   <div class="col-sm">
-                      <img src="../../images/uni-warsaw.jpg" class="img-fluid img-thumbnail float-left" alt="Responsive image" >
+                      <img id="image" src="" class="img-fluid img-thumbnail float-left" alt="Responsive image" >
                   </div>
                   <div class="col-8 text-center">
-                      <h2>University of Warsaw</h2>
+                      <h2 id="uniname"></h2>
                       <div class="row uni-details-brief">
                         <div class="col">
                           <p>Rank</p>
-                          <h4>1</h4>
+                          <h4 id="rank"></h4>
                         </div>
                         <div class="col">
                           <p>Average Fees</p>
-                          <h4>&euro; 2500</h4>
+                          <h4 id="fees">&euro; 2500</h4>
                         </div>
                         <div class="col">
                           <p>Status</p>
-                          <h4>Private</h4>
+                          <h4 id="status"></h4>
                         </div>
                         <div class="col">
                           <p>Research Output</p>
-                          <h4>Very High</h4>
+                          <h4 id="researchOutput"></h4>
                         </div>
                         <div class="col">
                           <p>Students</p>
-                          <h4>65,000</h4>
+                          <h4 id="numStudents"></h4>
                         </div>
                       </div>
                   </div>
@@ -92,7 +92,7 @@
                 </div>
               </div>
 
-              <div class="container">
+              <!-- <div class="container">
                 <nav>
                   <ul class="pagination justify-content-center">
                     <li class="page-item"><a href="" class="page-link">Courses</a></li>
@@ -204,13 +204,29 @@
                   
                    
                 </div>
-              </div>
+              </div> -->
 
 
 
     
 
-       
+              <script
+              src="https://code.jquery.com/jquery-3.3.1.min.js"
+              integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+              crossorigin="anonymous"></script>
+          <script>
+              $(document).ready(function(){
+                  $("#uniname").text(localStorage.getItem("data"));
+                  $("#uniDesc").text(localStorage.getItem("desc"));
+                  $("#image").attr('src', localStorage.getItem("image"));
+                  $("#rank").text(localStorage.getItem("rank"));
+                  $("#fees").html("&euro;&nbsp;"+localStorage.getItem("fees"));
+                  $("#status").text(localStorage.getItem("status"));
+                  $("#researchOutput").text(localStorage.getItem("researchOutput"));
+                  $("#numStudents").text(localStorage.getItem("numStudents"));
+                 // console.log("data: "+ localStorage.getItem("desc"));
+              });
+          </script>
       
 
                           
